@@ -16,7 +16,7 @@
 		 	var value, array=[], sum=0;
 			for (;;) {
 				value = prompt("Введите значение переменной value", 0);
-				if (value===""||value===false||value===undefined) {
+				if (value===""||value===null||value===undefined) {
 					break;
 				}
 				array.push(value);
