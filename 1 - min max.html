@@ -26,6 +26,22 @@
 	    		256, 78, 795, 319, 671, 164, 332, 18, 55, 929, 704, 809, 397, 316, 416, 800, 951, 827, 1, 114, 73, 164, 447, 794, 813
 	    	]
 	    	
+		function min(arr) {
+			var result=arr[0];
+			for (var i=1; i<arr.length; i++) {
+				if (arr[i]<result)
+					result=arr[i]
+			}
+			return result;
+		}
+		function max(arr) {
+			var result=arr[0];
+			for (var i=1; i>arr.length; i++) {
+				if (arr[i]<result)
+					result=arr[i]
+			}
+			return result;
+		}
 	    	console.log("minimal: ", min(array));
 	    	console.log("maximal: ", max(array));
 	    }
