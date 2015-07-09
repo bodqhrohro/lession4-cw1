@@ -12,10 +12,18 @@
 
 
 	<script type="text/javascript">
-		// window.onload = function(){
-		// 	var value = prompt("Введите значение переменной value", 0);
-		// 	alert("Значение переменной value = " + value);
-		// }
+		 window.onload = function(){
+		 	var value, array=[], sum=0;
+			for (;;) {
+				value = prompt("Введите значение переменной value", 0);
+				if (value===""||value===false||value===undefined) {
+					break;
+				}
+				array.push(value);
+				sum += value|0;
+			}
+		 	alert("Сумма значений массива = " + sum);
+		 }
 	</script>
 </head>
 <body>
