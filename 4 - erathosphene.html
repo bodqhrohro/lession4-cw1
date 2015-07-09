@@ -13,7 +13,22 @@
 
 	<script type="text/javascript">
 		window.onload = function(){
-			// Удачи!
+			var primes=[], p=2, n=100, i;
+			for (i=p;i<=n;i++) {
+				primes.push(i);
+			}
+			for (;p*p <= n;p++) {
+				for (i=0;i<=primes.length;i++) {
+					if (!(primes[i] % p) && primes[i]>p) {
+						primes.splice(i--, 1);
+					}
+				}
+			}
+			var sum=0;
+			for (i=0; i<primes.length; i++) {
+				sum+=primes[i];
+			}
+			alert(sum);
 		}
 	</script>
 </head>
