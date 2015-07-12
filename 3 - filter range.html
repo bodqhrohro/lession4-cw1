@@ -22,17 +22,9 @@
 				256, 78, 795, 319, 671, 164, 332, 18, 55, 929, 704, 809, 397, 316, 416, 800, 951, 827, 1, 114, 73, 164, 447, 794, 813
 			]
 
-			function filterRange(arr, a, b) {
-				var filtered=[];
-				for (var i=0; i<arr.length; i++) {
-					if (a<=arr[i] && arr[i]<=b) {
-						filtered.push(arr[i]);
-					}
-				}
-				return filtered;
-			}
-			
-			var filtered = filterRange(array, 200, 300);
+			var filtered = array.filter(function(item) {
+				return 200<=item && item<=300;
+			});
 			console.log("filtered: ", filtered);
 		}
 	</script>
