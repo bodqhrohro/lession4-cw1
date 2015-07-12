@@ -13,12 +13,18 @@
 
 	<script type="text/javascript">
 		function isEmpty(obj) {
-
+			for (var key in obj) {
+				if (obj.hasOwnProperty(key)) {
+					return true;
+				}
+			}
 			return false
 		}
 
 		window.onload = function(){
 			var obj = {};
+			console.log(isEmpty(obj))
+			obj = {a: 1};
 			console.log(isEmpty(obj))
 		}
 	</script>
