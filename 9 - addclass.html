@@ -13,11 +13,19 @@
 
 	<script type="text/javascript">
 		function addClass(obj, cls) {
-
+			var classArr = obj.className.split(' ');
+			if (classArr.indexOf(cls) == -1) {
+				classArr.push(cls);
+				obj.className = classArr.join(' ');
+			}
 		};
 
 		function removeClass(obj, cls) {
-			
+			var classArr = obj.className.split(' '), i;
+			while ((i = classArr.indexOf(cls)) > -1) {
+				classArr.splice(i, 1);
+				obj.className = classArr.join(' ');
+			}
 		};
 		
 
