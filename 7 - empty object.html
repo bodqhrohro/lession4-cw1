@@ -15,10 +15,10 @@
 		function isEmpty(obj) {
 			for (var key in obj) {
 				if (obj.hasOwnProperty(key)) {
-					return true;
+					return false;
 				}
 			}
-			return false
+			return true
 		}
 
 		window.onload = function(){
@@ -26,6 +26,9 @@
 			console.log(isEmpty(obj))
 			obj = {a: 1};
 			console.log(isEmpty(obj))
+			Object.prototype._field = 1;
+			var obj = {};
+			console.log(isEmpty(obj));
 		}
 	</script>
 </head>
